@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Alarma_Noticias</string>
+    <string name="app_name">Tabs</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="separador">:</string>
+    <string name="reloj">Reloj Alarma</string>
+    <string name="title_activity_ajustes">Ajustes</string>
+    <string name="settings">Ajuste  de hora</string>
+    <string name="format">HH:MM:SS</string>
 </resources>
