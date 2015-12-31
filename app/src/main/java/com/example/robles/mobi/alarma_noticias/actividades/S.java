@@ -1,4 +1,4 @@
-package com.example.robles.mobi.alarma_noticias;
+package com.example.robles.mobi.alarma_noticias.actividades;
 
 public class S {
 	public static int AJUSTES = 1;

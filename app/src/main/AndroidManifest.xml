@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Base.Theme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".actividades.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +17,25 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Ajustes"
+        <activity android:name=".actividades.Ajustes"
             android:label="Ajustes"/>
 
+        <activity android:name=".actividades.ConfigurarActivity"
+            android:label="@string/title_activity_configurar"
+            android:parentActivityName=".actividades.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".actividades.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".actividades.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".actividades.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".actividades.MainActivity" />
+        </activity>
 
     </application>
 

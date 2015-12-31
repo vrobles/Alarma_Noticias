@@ -1,4 +1,4 @@
-package com.example.robles.mobi.alarma_noticias;
+package com.example.robles.mobi.alarma_noticias.actividades;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.robles.mobi.alarma_noticias.R;
 
 public class Ajustes extends Activity {
 

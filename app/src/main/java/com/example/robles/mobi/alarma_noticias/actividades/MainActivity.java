@@ -1,15 +1,16 @@
-package com.example.robles.mobi.alarma_noticias;
+package com.example.robles.mobi.alarma_noticias.actividades;
 
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import java.util.Calendar;
 import android.widget.Toast;
+
+import com.example.robles.mobi.alarma_noticias.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -197,12 +198,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent alarma;
+        //Intent alarma;
 
         switch (item.getItemId()) {
             case R.id.block:
-                alarma=new Intent(this,Ajustes.class);
-                startActivity(alarma);
+                //alarma=new Intent(this,Ajustes.class);
+                //startActivity(alarma);
+                i = new Intent(this, Ajustes.class);
+                i.putExtra(S.FULL_TIME, curTime);
+                // hay una clase llamada S, que se encarga de contener var estaticas como AJUSTES
+                this.startActivityForResult(i, S.AJUSTES);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
