@@ -21,6 +21,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL("create table alarma(idAlarma int primary key NOT NULL AUTO_INCREMENT, hora text, fecha text, etiqueta text, idNoticias int, " +
                 "idNoticias int FOREIGN KEY REFERENCES noticias(idNoticias), idRadio int, idRadio int FOREIGN KEY REFERENCES radio(idRadio)" +
                 "idMail int,  idMail int FOREIGN KEY REFERENCES mail(idMail) )");
+        db.execSQL("create table dias(idDias int primary key NOT NULL AUTO_INCREMENT, nombre text )");
+        db.execSQL("create table alarma_dias(idAlarmaNoticias int primary key NOT NULL AUTO_INCREMENT, idNoticias int, idDias int, " +
+                "idNoticias int FOREIGN KEY REFERENCES noticias(idNoticias), idDias int FOREIGN KEY REFERENCES dias(idDias))");
+
 
     }
 
