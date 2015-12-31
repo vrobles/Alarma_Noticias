@@ -16,6 +16,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("create table mail(idMail int primary key NOT NULL AUTO_INCREMENT, nombre text, correo text, password text  )");
+        db.execSQL("create table noticias(idNoticias int primary key NOT NULL AUTO_INCREMENT, nombre text, urlNoticias text  )");
 
     }
 
