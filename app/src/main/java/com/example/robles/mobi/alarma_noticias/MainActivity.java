@@ -1,19 +1,17 @@
 package com.example.robles.mobi.alarma_noticias;
 
 import android.content.Intent;
+import android.view.MenuItem;
 import android.view.View;
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.res.Resources;
 import android.util.Log;
 import android.view.Menu;
-import android.widget.TabHost;
-import android.widget.TabHost.OnTabChangeListener;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import java.util.Calendar;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     TextView tHora;
     int hora=0, minuto =0, segundo = 0;
@@ -35,40 +33,6 @@ public class MainActivity extends Activity {
         r = new RefreshClock();
         iniReloj= new Thread(r);
         iniReloj.start();
-
-        Resources res = getResources();
-
-        TabHost tabs=(TabHost)findViewById(android.R.id.tabhost);
-        tabs.setup();
-
-        TabHost.TabSpec spec=tabs.newTabSpec("mitab1"); //estamos creando una nueva especificacion
-        spec.setContent(R.id.tab1);
-        spec.setIndicator("ALARMA", res.getDrawable(android.R.drawable.ic_btn_speak_now));
-        tabs.addTab(spec);
-
-        spec=tabs.newTabSpec("mitab2");
-        spec.setContent(R.id.tab2);
-        spec.setIndicator("LISTA DE ALARMAS",
-                res.getDrawable(android.R.drawable.ic_dialog_map));
-        tabs.addTab(spec);
-
-        spec=tabs.newTabSpec("mitab3");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("CONFIGURACION",
-                res.getDrawable(android.R.drawable.ic_dialog_map));
-        tabs.addTab(spec);
-
-        tabs.setCurrentTab(0);
-
-        tabs.setOnTabChangedListener(new OnTabChangeListener() {
-            public void onTabChanged(String tabId) {
-                Log.i("AndroidTabsDemo", "Pulsada pesta�a: " + tabId);
-
-
-
-            }
-        });
-
 
         final TextView fecha_actual = (TextView) findViewById(R.id.fecha01);
 
@@ -224,11 +188,27 @@ public class MainActivity extends Activity {
     }
 
     @Override
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_configuracion, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent alarma;
+
+        switch (item.getItemId()) {
+            case R.id.block:
+                alarma=new Intent(this,Ajustes.class);
+                startActivity(alarma);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

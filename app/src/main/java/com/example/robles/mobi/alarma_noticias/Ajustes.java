@@ -53,13 +53,13 @@ public class Ajustes extends Activity {
 		}
 	}
 	
-	/**
-	 * Este metodo comprueba que la hora ingresada es correcta y hace el retorno de falso 
-	 * oh verdadero, es decir no hace nada oh es cero oh es uno
-	 * @param n1: es la hora
-	 * @param n2: los minitos
-	 * @param n3: los segundos
-	 * @return
+	/*
+	  Este metodo comprueba que la hora ingresada es correcta y hace el retorno de falso
+	  oh verdadero, es decir no hace nada oh es cero oh es uno
+	  @param n1: es la hora
+	  @param n2: los minitos
+	  @param n3: los segundos
+	  @return
 	 */
 	private boolean comprobarNum(int n1, int n2, int n3){
 		horaParse = ""+n1+":"+n2+":"+n3;
@@ -83,10 +83,10 @@ public class Ajustes extends Activity {
 		return isOK;
 	}
 	
-	/**
-	 * El metodo parsear simplemente convierte la cadena que obtenemos del 
-	 * EditText y lo pasa a las variables de hora, minuto y segundo
-	 * @param a
+	/*
+	  El metodo parsear simplemente convierte la cadena que obtenemos del
+	  EditText y lo pasa a las variables de hora, minuto y segundo
+	  @param a
 	 */
 	private void parsear(String a){
 		parseInt = a.split(":");
@@ -122,7 +122,7 @@ public class Ajustes extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_main, menu);
+		getMenuInflater().inflate(R.menu.menu_configuracion, menu);
 		return true;
 	}
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tabs</string>
+    <string name="app_name">Alarma</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="separador">:</string>
@@ -7,4 +7,7 @@
     <string name="title_activity_ajustes">Ajustes</string>
     <string name="settings">Ajuste  de hora</string>
     <string name="format">HH:MM:SS</string>
+    <string name="listaAlarmas">Lista de Alarmas</string>
+    <string name="configurar">Configurar</string>
+    <string name="alarma">Alarma</string>
 </resources>

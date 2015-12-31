@@ -1,26 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TabHost android:id="@android:id/tabhost"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TabWidget android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@android:id/tabs" />
-
-            <FrameLayout android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@android:id/tabcontent" >
-
-                <LinearLayout android:id="@+id/tab1"
+        <LinearLayout android:id="@+id/tab1"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -30,18 +15,6 @@
                     android:paddingTop="@dimen/activity_vertical_margin"
                     android:weightSum="1">
 
-                    <TextView android:id="@+id/textView1"
-                        android:text="Contenido Tab 1"
-                        android:layout_width="219dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.11" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/reloj" />
 
                     <TableRow
                         android:id="@+id/tableRow1"
@@ -99,101 +72,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:onClick="ajuste"
-                        android:text="Ajustar hora" />
+                        android:text="@string/listaAlarmas" />
                 </LinearLayout>
 
-                <LinearLayout android:id="@+id/tab2"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView android:id="@+id/textView2"
-                        android:text="Contenido Tab 2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/reloj" />
-
-                    <TableRow
-                        android:id="@+id/tableRow4"
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/tableRow5"
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-
-
-                    </TableRow>
-
-                    <TableRow
-                        android:id="@+id/tableRow6"
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-
-
-                    </TableRow>
-
-                    <Button
-                        android:id="@+id/btnGuardar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="ajuste"
-                        android:text="Guardar" />
-
-                    <Button
-                        android:id="@+id/btnCancelar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="ajuste"
-                        android:text="Cancelar" />
-
-
-
-
-
-
-                </LinearLayout>
-
-
-
-                <LinearLayout android:id="@+id/tab3"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <TextView android:id="@+id/textView3"
-                        android:text="Contenido Tab 3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-    </TabHost>
-
-</LinearLayout>
+</RelativeLayout>
