@@ -32,6 +32,10 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO dias(nombre) VALUES(Sabado)");
         db.execSQL("INSERT INTO dias(nombre) VALUES(Domingo)");
 
+        db.execSQL("INSERT INTO noticias(nombre,urlNoticias) VALUES(El Universo, http://www.eluniverso.com/servicios/rss)");
+        db.execSQL("INSERT INTO noticias(nombre,urlNoticias) VALUES(El Comercio, http://www.elcomercio.com/pages/rss.html)");
+
+
     }
 
     @Override
