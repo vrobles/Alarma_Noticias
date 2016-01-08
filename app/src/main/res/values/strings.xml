@@ -15,7 +15,7 @@
     <string name="title">Título</string>
 
     <string name="action_save">Guardar</string>
-    <string name="title_activity_detail">Nueva Oportunidad</string>
+    <string name="title_activity_detail">Configurar Correo</string>
 
     <!-- Strings de diálogo personalizado -->
     <string name="info_text">Necesitas tener creada una cuenta para iniciar la aplicación</string>
@@ -25,26 +25,17 @@
     <string name="recordar_check">Recordarme</string>
     <string name="olvidar_text">¿Olvidaste tu Contraseña?</string>
     <string name="entrar_boton">ENTRAR</string>
-    <string name="cliente_label">Cliente</string>
+    <string name="cliente_label">Correos</string>
     <string name="producto_label">Producto</string>
     <string name="fecha_label">Fecha</string>
     <string name="prioridad_label">Prioridad</string>
     <string name="notas_label">Notas</string>
     <string name="notas_hint">Notas</string>
-    <string-array name="clientes">
-        <item>Fernando Jimenez</item>
-        <item>Carlos Fuentes</item>
-        <item>Pedro Lopez</item>
+    <string-array name="Correos">
+        <item>Gmail</item>
+        <item>Hotmail</item>
+        <item>Yahoo</item>
     </string-array>
-    <string-array name="productos">
-        <item>Seguro A</item>
-        <item>Seguro B</item>
-        <item>Seguro C</item>
-    </string-array>
-    <string-array name="prioridades">
-        <item>Alta</item>
-        <item>Media</item>
-        <item>Baja</item>
-    </string-array>
+
 
 </resources>

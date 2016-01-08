@@ -44,46 +44,6 @@ public class FullScreenDialog extends DialogFragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fullscreen_dialog, container, false);
-        iniciarHora(view);// Setear hora inicial
-        iniciarFecha(view);// Setear fecha inicial
-        return view;
-    }
-
-    private void iniciarHora(View view) {
-        textTiempo = (TextView) view.findViewById(R.id.hora_text);
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm a");
-        textTiempo.setText(format.format(c.getTime()));
-
-        textTiempo.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        new TimeDialog().show(getFragmentManager(), "TimePickerInFull");
-                    }
-                }
-        );
-    }
-
-    private void iniciarFecha(View view) {
-        textFecha = (TextView) view.findViewById(R.id.fecha_text);
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat format = new SimpleDateFormat("E MMM d yyyy");
-        textFecha.setText(format.format(c.getTime()));
-
-        textFecha.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        new DateDialog().show(getFragmentManager(), "DatePickerInFull");
-                    }
-                }
-        );
-    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {

@@ -42,14 +42,14 @@ public class MainFragment extends Fragment {
 
         // Datos de la lista
         String[] data = {
-                "Diálogo Simple",
-                "Dialogo Con Lista Simple",
-                "Diálogo Con Lista De Radios",
-                "Diálogo Con Lista De Checkboxes",
-                "Diálogo Personalizado",
-                "DatePickerDialog",
-                "TimePickerDialog",
-                "Diálogo Full Screen"
+                "Activar Alarma",
+                "Noticias",
+                "Radio",
+                "Repetir",
+                "Iniciar Sesion Correo",
+                "Fecha",
+                "Ajustar Hora",
+                "Configurar Email"
         };
 
         ArrayAdapter adaptador = new ArrayAdapter<String>(

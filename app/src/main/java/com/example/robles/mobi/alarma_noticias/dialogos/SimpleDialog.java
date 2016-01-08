@@ -38,7 +38,7 @@ public class SimpleDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         builder.setTitle("Titulo")
-                .setMessage("El Mensaje para el usuario")
+                .setMessage("Alarma Activada")
                 .setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             @Override

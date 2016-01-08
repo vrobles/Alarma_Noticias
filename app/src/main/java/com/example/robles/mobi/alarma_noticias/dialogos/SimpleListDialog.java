@@ -32,11 +32,11 @@ public class SimpleListDialog extends DialogFragment {
 
         final CharSequence[] items = new CharSequence[3];
 
-        items[0] = "Naranja";
-        items[1] = "Mango";
-        items[2] = "Banano";
+        items[0] = "El Universo";
+        items[1] = "El Tiempo";
+        items[2] = "BBC Mundo";
 
-        builder.setTitle("Diálogo De Lista")
+        builder.setTitle("Lista de RSS")
                 .setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

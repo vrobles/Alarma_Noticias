@@ -11,6 +11,7 @@ import java.util.Calendar;
 import android.widget.Toast;
 
 import com.example.robles.mobi.alarma_noticias.R;
+import com.example.robles.mobi.alarma_noticias.fragmentos.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -204,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.block:
                 //alarma=new Intent(this,Ajustes.class);
                 //startActivity(alarma);
-                i = new Intent(this, Ajustes.class);
+                i = new Intent(this, ConfigurarActivity.class);
                 i.putExtra(S.FULL_TIME, curTime);
                 // hay una clase llamada S, que se encarga de contener var estaticas como AJUSTES
                 this.startActivityForResult(i, S.AJUSTES);

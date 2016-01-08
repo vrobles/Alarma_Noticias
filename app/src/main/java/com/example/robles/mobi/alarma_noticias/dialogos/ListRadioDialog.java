@@ -32,11 +32,11 @@ public class ListRadioDialog extends DialogFragment {
 
         final CharSequence[] items = new CharSequence[3];
 
-        items[0] = "Soltero/a";
-        items[1] = "Casado/a";
-        items[2] = "Divorciado/a";
+        items[0] = "Radio Disney";
+        items[1] = "Radio La Bruja";
+        items[2] = "Radio Canela";
 
-        builder.setTitle("Estado Civil")
+        builder.setTitle("Lista de Radios")
                 .setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

@@ -35,13 +35,17 @@ public class ListCheckboxDialog extends DialogFragment {
 
         final ArrayList itemsSeleccionados = new ArrayList();
 
-        CharSequence[] items = new CharSequence[3];
+        CharSequence[] items = new CharSequence[7];
 
-        items[0] = "Desarrollo Android";
-        items[1] = "Diseño De Bases De Datos";
-        items[2] = "Pruebas Unitarias";
+        items[0] = "Lunes";
+        items[1] = "Martes";
+        items[2] = "Miercoles";
+        items[3] = "Jueves";
+        items[4] = "Viernes";
+        items[5] = "Sabado";
+        items[6] = "Domingo";
 
-        builder.setTitle("Intereses")
+        builder.setTitle("Dias de la Semana")
                 .setMultiChoiceItems(items, null, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which, boolean isChecked) {

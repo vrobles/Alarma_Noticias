@@ -36,6 +36,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO noticias(nombre,urlNoticias) VALUES(El Comercio, http://www.elcomercio.com/pages/rss.html)");
 
 
+
     }
 
     @Override
