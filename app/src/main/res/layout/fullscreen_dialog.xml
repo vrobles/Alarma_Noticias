@@ -30,6 +30,9 @@
             android:layout_below="@+id/textView"
             android:entries="@array/Correos" />
 
+
+
+
         <View
             android:id="@+id/centro"
             android:layout_width="1dp"

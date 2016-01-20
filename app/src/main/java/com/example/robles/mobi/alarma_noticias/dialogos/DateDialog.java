@@ -24,6 +24,8 @@ public class DateDialog extends DialogFragment {
         int day = c.get(Calendar.DAY_OF_MONTH);
 
         // Retornar en nueva instancia del dialogo selector de fecha
+        //coger valor de la fecha para la base de datos
+
         return new DatePickerDialog(
                 getActivity(),
                 (DatePickerDialog.OnDateSetListener) getActivity(),

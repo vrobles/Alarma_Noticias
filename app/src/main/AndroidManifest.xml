@@ -37,6 +37,8 @@
                 android:value=".actividades.MainActivity" />
         </activity>
 
+
+
     </application>
 
 </manifest>

@@ -33,6 +33,7 @@ public class DetailActivity extends AppCompatActivity implements
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.add(android.R.id.content, newFragment, "FullScreenFragment").commit();
+
     }
 
 

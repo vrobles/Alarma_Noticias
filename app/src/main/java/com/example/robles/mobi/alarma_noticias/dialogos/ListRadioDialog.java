@@ -36,6 +36,8 @@ public class ListRadioDialog extends DialogFragment {
         items[1] = "Radio La Bruja";
         items[2] = "Radio Canela";
 
+        //Coger el valor del item seleccionado para guardar en la base de datos
+
         builder.setTitle("Lista de Radios")
                 .setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
                     @Override

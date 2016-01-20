@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
 
 import com.example.robles.mobi.alarma_noticias.R;
 import com.example.robles.mobi.alarma_noticias.actividades.DetailActivity;
@@ -20,21 +22,26 @@ import com.example.robles.mobi.alarma_noticias.dialogos.ListRadioDialog;
 import com.example.robles.mobi.alarma_noticias.dialogos.LoginDialog;
 import com.example.robles.mobi.alarma_noticias.dialogos.SimpleListDialog;
 import com.example.robles.mobi.alarma_noticias.dialogos.TimeDialog;
+import android.os.Bundle;
+import android.widget.TextView;
 
 /**
  * Fragmento principal
  */
 public class MainFragment extends Fragment {
 
-
+    private RadioButton r1;
     private ListView lista;
+    private StringBuilder mensaje = new StringBuilder();
 
     public MainFragment() {
     }
 
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
 
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
@@ -49,8 +56,31 @@ public class MainFragment extends Fragment {
                 "Iniciar Sesion Correo",
                 "Fecha",
                 "Ajustar Hora",
-                "Configurar Email"
+                "Configurar Email",
         };
+        /*Button guardar = (Button) v.findViewById(R.id.crear_guardar);
+        Button cancelar = (Button) v.findViewById(R.id.crear_cancelar);
+
+        guardar.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Crear Cuenta...
+//                        dismiss();
+                    }
+                }
+        );
+
+        cancelar.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Loguear...
+  //                      dismiss();
+                    }
+                }
+
+        );*/
 
         ArrayAdapter adaptador = new ArrayAdapter<String>(
                 getActivity(),
@@ -71,10 +101,10 @@ public class MainFragment extends Fragment {
 
                         switch (position) {
                             case 0:
-                                new SimpleDialog().show(fragmentManager, "SimpleDialog");
+                                new SimpleDialog().show(fragmentManager, "SimpleDialog");//Activar Alarma
                                 break;
                             case 1:
-                                new SimpleListDialog().show(fragmentManager, "SimpleListDialog");
+                                new SimpleListDialog().show(fragmentManager, "SimpleListDialog");//RSS
                                 break;
                             case 2:
                                 new ListRadioDialog().show(fragmentManager, "ListRadioDialog");
@@ -99,6 +129,9 @@ public class MainFragment extends Fragment {
                 }
         );
 
+
         return v;
     }
+
+
 }

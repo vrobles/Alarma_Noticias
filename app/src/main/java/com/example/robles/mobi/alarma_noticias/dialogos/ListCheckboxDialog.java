@@ -28,8 +28,9 @@ public class ListCheckboxDialog extends DialogFragment {
      * Crea un diálogo con una lista de checkboxes
      * de selección multiple
      *
-     * @return Diálogo
+     * @return Diálogo REPETIR FECHAS DIAS DE LA SEMANA
      */
+
     public AlertDialog createMultipleListDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
@@ -44,6 +45,8 @@ public class ListCheckboxDialog extends DialogFragment {
         items[4] = "Viernes";
         items[5] = "Sabado";
         items[6] = "Domingo";
+
+        //Aqui debo coger los dias que esten activos para guardar en la base de datos
 
         builder.setTitle("Dias de la Semana")
                 .setMultiChoiceItems(items, null, new DialogInterface.OnMultiChoiceClickListener() {

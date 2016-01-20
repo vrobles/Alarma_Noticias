@@ -13,6 +13,8 @@
     <string name="title_activity_configurar">Configurar</string>
 
     <string name="title">Título</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
 
     <string name="action_save">Guardar</string>
     <string name="title_activity_detail">Configurar Correo</string>
@@ -31,6 +33,8 @@
     <string name="prioridad_label">Prioridad</string>
     <string name="notas_label">Notas</string>
     <string name="notas_hint">Notas</string>
+
+
     <string-array name="Correos">
         <item>Gmail</item>
         <item>Hotmail</item>

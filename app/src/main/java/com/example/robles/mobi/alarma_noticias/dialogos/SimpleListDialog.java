@@ -30,6 +30,8 @@ public class SimpleListDialog extends DialogFragment {
     public AlertDialog createSingleListDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+        //
+
         final CharSequence[] items = new CharSequence[3];
 
         items[0] = "El Universo";
